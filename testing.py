@@ -84,7 +84,7 @@ try:
     WebDriverWait(driver, 5).until(EC.visibility_of_element_located((By.ID, "roomModal")))
 
 
-    driver.find_element(By.NAME, "room").send_keys("Room 04")
+    driver.find_element(By.NAME, "room").send_keys("Room 05")
     time.sleep(1)
     driver.find_element(By.NAME, "add_room").click()
     time.sleep(2)
@@ -101,7 +101,9 @@ try:
     time.sleep(1)
     Select(driver.find_element(By.NAME, "day_description")).select_by_visible_text("T TH")
     time.sleep(1)
-    Select(driver.find_element(By.NAME, "room_description")).select_by_visible_text("Room 04")
+    Select(driver.find_element(By.NAME, "time_description")).select_by_visible_text("7:30-9:00")
+    time.sleep(1)
+    Select(driver.find_element(By.NAME, "room_description")).select_by_visible_text("Room 05")
     time.sleep(1)
     Select(driver.find_element(By.NAME, "fname")).select_by_visible_text("Rommel Manuquil")
     time.sleep(1)
